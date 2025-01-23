@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+Calendar Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description
 
-## Available Scripts
+This project is a client-side React application that integrates user authentication and Google Calendar API functionality using Supabase. The application allows users to sign in with Google, create calendar events, and manage authentication efficiently. It demonstrates practical usage of modern frontend techniques and tools.
 
-In the project directory, you can run:
+Key Techniques Used
 
-### `npm start`
+Supabase Authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project uses Supabase to manage user authentication, including signing in with Google and handling OAuth tokens.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Implements useSupabaseClient from @supabase/auth-helpers-react for seamless integration with the Supabase backend.
 
-### `npm test`
+Google Calendar API Integration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app interacts directly with the Google Calendar API to create events.
 
-### `npm run build`
+Uses OAuth 2.0 tokens obtained via Supabase for authorized access to user calendars.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React Hooks and Functional Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+useState is used extensively for managing local state, such as event details and date values.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+useSession from @supabase/auth-helpers-react handles session management for authenticated users. Learn more about React Hooks on MDN.
 
-### `npm run eject`
+Date and Time Handling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project uses the react-datetime-picker library for selecting event start and end times, simplifying date and time inputs. Learn more about the library here.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Libraries and Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Supabase: A backend-as-a-service that provides authentication, database, and storage.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Google Calendar API: Used for creating calendar events.
 
-## Learn More
+React DateTime Picker: A lightweight and easy-to-use date/time picker component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Bootstrap: (Optional) For styling, as suggested in discussions, but not explicitly included in the code provided.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Intl.DateTimeFormat: Utilized to dynamically fetch the user's timezone. Read more on MDN.
